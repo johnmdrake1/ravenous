@@ -1,0 +1,104 @@
+/* Careful: changed from certain things in example code to work with my buttons instead since I'm making use of button elements instead of li elements */
+
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./background_search_desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25rem;
+  }
+    /* Originally .SearchBarSortOptions ul, removed ul for button compatibility */
+  .SearchBarSortOptions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.22rem;
+    color: #ffffff;
+  }
+  /* changed from .SearchBarSortOptions li */
+  .SearchBarSortOptions button {
+    cursor: pointer;
+    width: 4.33rem;
+    border-bottom: 1px solid #fff;
+    padding: 0 2.58rem 0.33rem 2.58rem;
+    line-height: 1.13;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.83rem;
+    transition: color 0.25s;
+    list-style: none;
+  }
+  /* changed from .SearchBarSortOptions li:hover */
+  .SearchBarSortOptions button:hover {
+    color: #d4cfcf;
+  }
+  /* changed from 
+  .SearchBarSortOptions li .active
+  .SearchBarSortOptions li.active.hover
+  */
+  .SearchBarSortOptions button.active,
+  .SearchBarSortOptions button.active:hover {
+    border-bottom: 1px solid #f0c36c;
+    color: #f0c36c;
+  }
+  
+  .SearchBarFields {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;
+  }
+  
+  .SearchBarFields input {
+    width: 21rem;
+    padding: 0.66rem 1rem;
+    margin-right: 2.22rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 0.77rem;
+    font-weight: 500;
+  }
+  
+  .SearchBarFields input:last-child {
+    margin-right: 0;
+  }
+  
+  .SearchBarSubmit {
+    text-align: center;
+  }
+  /* Changed from .searchbarsubmit  */
+  .SearchBarSubmit button {
+    border-radius: 4px;
+    padding: 0.72rem 1.7rem;
+    background-color: #cca353;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.5s;
+  }
+  /* Changed from .searchbarsubmit a:hover */
+  .SearchBarSubmit button:hover {
+    cursor: pointer;
+    background-color: #a7874b;
+  }
+  
+  @media only screen and (max-width: 560px) {
+    .SearchBar {
+      background-image: url("./background_search_mobile.jpg");
+    }
+    /* Originally .SearchBarSortOptions ul, removed ul for button compatibility */
+    .SearchBarSortOptions {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .SearchBarFields {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .SearchBarFields input {
+      margin-right: 0;
+      margin-bottom: 0.86rem;
+    }
+  }
+  
