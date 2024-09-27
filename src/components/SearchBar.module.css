@@ -66,6 +66,7 @@
   .SearchBarSubmit {
     text-align: center;
   }
+  /* test */
   /* Changed from .searchbarsubmit  */
   .SearchBarSubmit button {
     border-radius: 4px;
@@ -76,9 +77,10 @@
     transition: background-color 0.5s;
   }
   /* Changed from .searchbarsubmit a:hover */
+  /* Also changed hover color for funsies(this appears to be the "Search" button) */
   .SearchBarSubmit button:hover {
     cursor: pointer;
-    background-color: #a7874b;
+    background-color: #5a4ba7;
   }
   
   @media only screen and (max-width: 560px) {

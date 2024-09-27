@@ -1,11 +1,12 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import styles from './App.module.css';
 //import list of decoy businesses, this is just here now to test
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       {/* This is just here now and the default code commented out to test */}
       <h1>ravenous</h1>
       <SearchBar />
