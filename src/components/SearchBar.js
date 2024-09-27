@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SearchBar.module.css';
-
+//Object with keys being what the button does in human-friendly format, corresponding values being what should eventually be the corresponding call to Yelp API
 const sortOptions = {
     "Best Match": "best_match",
     "Highest Rated": "rating",
