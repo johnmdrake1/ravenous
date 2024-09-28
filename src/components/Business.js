@@ -2,17 +2,7 @@ import React from 'react';
 import styles from './Business.module.css';
 
 // hardcoded business for creating list of fake businesses and simulating website functionality
-const bus = {
-    imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-}
+//has been moved to App.js as part of Part 2 component unidirectional data flow refactoring
 
 
 function Business(){
