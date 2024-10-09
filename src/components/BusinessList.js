@@ -9,7 +9,7 @@ function BusinessList(props){
         <div className={styles.BusinessList}>
             {/* map function goes through passed in business list prop, returns a Business instance for each business, passing each business in as a prop called bus with a value of
             business from the map function */}
-            {props.businesslist.map((business) => (<Business bus={business} />))}
+            {props.businesslist.map((business) => (<Business bus={business} key={business.name} />))}
             {/* {
             Old code from part 1
             <Business />
