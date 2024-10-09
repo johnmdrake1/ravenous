@@ -14,18 +14,21 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2.22rem;
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   /* changed from .SearchBarSortOptions li */
   .SearchBarSortOptions button {
     cursor: pointer;
-    width: 4.33rem;
-    border-bottom: 1px solid #fff;
-    padding: 0 2.58rem 0.33rem 2.58rem;
+    width: 5rem;
+    border:none;
+    /* border-bottom: 1px solid #fff; */
+    /* padding: 0 2.58rem 0.33rem 2.58rem; */
+    background-color: transparent;
+    color: #ffffff;
     line-height: 1.13;
     text-align: center;
     font-weight: 600;
-    font-size: 0.83rem;
+    font-size: 1rem;
     transition: color 0.25s;
     list-style: none;
   }
