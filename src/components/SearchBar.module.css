@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2.22rem;
+    /* this color line wasn't doing anything. I set button color in the button selector below though. */
     /* color: #ffffff; */
   }
   /* changed from .SearchBarSortOptions li */
