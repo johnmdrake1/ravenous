@@ -28,6 +28,11 @@ function SearchBar(){
         setSearchTerm(currentInput);
     }
 
+    //event handler for typing in location field
+    function handleLocationTermChange(event){
+        const currentInput = event.target.value;
+        setSearchLocation(currentInput);
+    }
 
     // function to make sort option buttons
     function produceSortOptions(){
@@ -52,8 +57,8 @@ function SearchBar(){
                 {produceSortOptions()}
             </div>
             <div className={styles.SearchBarFields}>
-                <input placeholder="Business keywords" onChange={handleSearchTermChange} value={searchTerm} />
-                <input placeholder="Location" />
+                <input placeholder="Business Keywords" onChange={handleSearchTermChange} value={searchTerm} />
+                <input placeholder="Location" onChange={handleLocationTermChange} value={searchLocaton} />
             </div>
             <div className={styles.SearchBarSubmit}>
                 {/* need to get this compatible with the styling, example used <a> instead of button tag */}
