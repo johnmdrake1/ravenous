@@ -12,8 +12,8 @@ function SearchBar(){
     const [searchTerm, setSearchTerm] = useState('');
     //managing state for search location in the field with the "Location" placeholder. initialized with empty string ''
     const [searchLocaton, setSearchLocation] = useState('');
-    //managing state for the selected sorting option to use, changed with the sort option buttons(Best Match, Highest Rated, Most Reviewed)
-    const [searchSortOption, setSearchSortOption] = useState();
+    //managing state for the selected sorting option to use, changed with the sort option buttons(Best Match, Highest Rated, Most Reviewed). default best_match
+    const [searchSortOption, setSearchSortOption] = useState("best_match");
     //click handler to change active sort option that will be the onclick attribute of each button element
     function handleSortOptionClick(event){
         //get the value attribute of the button that clicked
