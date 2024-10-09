@@ -19,6 +19,7 @@
   /* changed from .SearchBarSortOptions li */
   .SearchBarSortOptions button {
     cursor: pointer;
+    /* Currently, if I increase width at all, the stacking of button text breaks */
     width: 5rem;
     border:none;
     /* border-bottom: 1px solid #fff; */
@@ -34,7 +35,8 @@
   }
   /* changed from .SearchBarSortOptions li:hover */
   .SearchBarSortOptions button:hover {
-    color: #d4cfcf;
+    color: #f0c36c;
+    border-bottom:5px solid #5a4ba7;
   }
   /* changed from 
   .SearchBarSortOptions li .active
@@ -42,8 +44,8 @@
   */
   .SearchBarSortOptions button.active,
   .SearchBarSortOptions button.active:hover {
-    border-bottom: 1px solid #f0c36c;
-    color: #f0c36c;
+    border-bottom: 5px solid #2ca335;
+    color: #de1230;
   }
   
   .SearchBarFields {
