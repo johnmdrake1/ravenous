@@ -11,7 +11,7 @@ function SearchBar(){
     //managing state for search term in the field with "business keywords" placeholder. initialized with empty string ''
     const [searchTerm, setSearchTerm] = useState('');
     //managing state for search location in the field with the "Location" placeholder. initialized with empty string ''
-    const [searchLocaton, setSearchLocation] = useState('');
+    const [searchLocation, setSearchLocation] = useState('');
     //managing state for the selected sorting option to use, changed with the sort option buttons(Best Match, Highest Rated, Most Reviewed). default best_match
     const [searchSortOption, setSearchSortOption] = useState("best_match");
     //click handler to change active sort option that will be the onclick attribute of each button element
@@ -33,6 +33,13 @@ function SearchBar(){
         const currentInput = event.target.value;
         setSearchLocation(currentInput);
     }
+
+    //event handler for clicking submit
+    function handleSearchClick(){
+        //log a test message to the console with search term, search location, and search sort option when the search submit button is clicked
+        console.log(`Searching Yelp with ${searchTerm}, ${searchLocation}, ${searchSortOption}`);
+    }
+
 
     // function to make sort option buttons
     function produceSortOptions(){
@@ -58,11 +65,11 @@ function SearchBar(){
             </div>
             <div className={styles.SearchBarFields}>
                 <input placeholder="Business Keywords" onChange={handleSearchTermChange} value={searchTerm} />
-                <input placeholder="Location" onChange={handleLocationTermChange} value={searchLocaton} />
+                <input placeholder="Location" onChange={handleLocationTermChange} value={searchLocation} />
             </div>
             <div className={styles.SearchBarSubmit}>
                 {/* need to get this compatible with the styling, example used <a> instead of button tag */}
-                <button>Search</button>
+                <button onClick={handleSearchClick}>Search</button>
             </div>
         </div>
     )
