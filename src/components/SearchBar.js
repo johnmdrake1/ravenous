@@ -21,6 +21,14 @@ function SearchBar(){
         // call the state setter with this value to set the state to the value of the button that was clicked(which also happens to be the API call)
         setSearchSortOption(selectedOption);
     }
+    //event handler for typing in search terms field
+    function handleSearchTermChange(event){
+        //might want to condense this into one line
+        const currentInput = event.target.value;
+        setSearchTerm(currentInput);
+    }
+
+
     // function to make sort option buttons
     function produceSortOptions(){
         //uses map to iterate over sortOptions keys(sortType)
@@ -44,7 +52,7 @@ function SearchBar(){
                 {produceSortOptions()}
             </div>
             <div className={styles.SearchBarFields}>
-                <input placeholder="Business keywords" />
+                <input placeholder="Business keywords" onChange={handleSearchTermChange} value={searchTerm} />
                 <input placeholder="Location" />
             </div>
             <div className={styles.SearchBarSubmit}>
