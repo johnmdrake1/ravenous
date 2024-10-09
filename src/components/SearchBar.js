@@ -35,7 +35,10 @@ function SearchBar(){
     }
 
     //event handler for clicking submit
-    function handleSearchClick(){
+    //event object is not being used right now, just there for prevent default
+    function handleSearchClick(event){
+        //only using event object to prevent default here
+        event.preventDefault();
         //log a test message to the console with search term, search location, and search sort option when the search submit button is clicked
         console.log(`Searching Yelp with ${searchTerm}, ${searchLocation}, ${searchSortOption}`);
     }
