@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './SearchBar.module.css';
 //Object with keys being what the button does in human-friendly format, corresponding values being what should eventually be the corresponding call to Yelp API
 const sortOptions = {
@@ -8,6 +8,12 @@ const sortOptions = {
 }
 
 function SearchBar(){
+    //managing state for search term in the field with "business keywords" placeholder
+    const [searchTerm, setSearchTerm] = useState();
+    //managing state for search location in the field with the "Location" placeholder
+    const [searchLocaton, setSearchLocation] = useState();
+    //managing state for the selected sorting option to use, changed with the sort option buttons(Best Match, Highest Rated, Most Reviewed)
+    const [searchSortOption, setSearchSortOption] = useState();
     // function to make sort option buttons
     function produceSortOptions(){
         //uses map to iterate over sortOptions keys(sortType)
