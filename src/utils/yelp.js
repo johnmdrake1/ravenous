@@ -13,7 +13,24 @@ function yelp(term, location, sortBy) {
     //fetch get request with url and headers(headers is supposed to be part of a larger options object so i destructure it here)
     fetch(url, { headers })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(res => {
+        //log json res returned by previous then
+        console.log(res);
+        //constant for holding businesses formatted in the format I need them in based on how my code is structured
+        const formattedBusinesses = res.businesses.map(business => ({
+            imageSrc: business.image_url,
+            name: business.name,
+            address: business.location.address1,
+            city: business.location.city,
+            state: business.location.state,
+            zipCode: business.location.zip_code,
+            category: business.categories[0].title,
+            rating: business.rating,
+            reviewCount: business.review_count
+          }));
+          //log the formatted businesses variable
+          console.log(formattedBusinesses);
+    })
     .catch(err => console.error(err));
 }
 
