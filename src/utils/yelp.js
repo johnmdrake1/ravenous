@@ -11,13 +11,14 @@ function yelp(term, location, sortBy) {
         Authorization: `Bearer ${yelpKey}`
     }
     //fetch get request with url and headers(headers is supposed to be part of a larger options object so i destructure it here)
-    fetch(url, { headers })
+    return fetch(url, { headers })
     .then(res => res.json())
     .then(res => {
         //log json res returned by previous then
         console.log(res);
         //constant for holding businesses formatted in the format I need them in based on how my code is structured
         const formattedBusinesses = res.businesses.map(business => ({
+            id: business.id,
             imageSrc: business.image_url,
             name: business.name,
             address: business.location.address1,
@@ -30,6 +31,8 @@ function yelp(term, location, sortBy) {
           }));
           //log the formatted businesses variable
           console.log(formattedBusinesses);
+          //return the formatted businessed
+          return formattedBusinesses;
     })
     .catch(err => console.error(err));
 }
