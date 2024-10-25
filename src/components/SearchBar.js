@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from './SearchBar.module.css';
+import yelp from '../utils/yelp.js';
 //Object with keys being what the button does in human-friendly format, corresponding values being what should eventually be the corresponding call to Yelp API
 const sortOptions = {
     "Best Match": "best_match",
@@ -41,6 +42,8 @@ function SearchBar(){
         event.preventDefault();
         //log a test message to the console with search term, search location, and search sort option when the search submit button is clicked
         console.log(`Searching Yelp with ${searchTerm}, ${searchLocation}, ${searchSortOption}`);
+        //actually call the yelp search function from utils/yelp.js
+        yelp(searchTerm, searchLocation, searchSortOption);
     }
 
 

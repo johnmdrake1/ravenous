@@ -16,3 +16,5 @@ function yelp(term, location, sortBy) {
     .then(res => console.log(res))
     .catch(err => console.error(err));
 }
+
+export default yelp;
