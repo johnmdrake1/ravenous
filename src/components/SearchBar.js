@@ -8,7 +8,7 @@ const sortOptions = {
     "Most Reviewed": "review_count"
 }
 
-function SearchBar(){
+function SearchBar(props){
     //managing state for search term in the field with "business keywords" placeholder. initialized with empty string ''
     const [searchTerm, setSearchTerm] = useState('');
     //managing state for search location in the field with the "Location" placeholder. initialized with empty string ''
@@ -42,8 +42,8 @@ function SearchBar(){
         event.preventDefault();
         //log a test message to the console with search term, search location, and search sort option when the search submit button is clicked
         console.log(`Searching Yelp with ${searchTerm}, ${searchLocation}, ${searchSortOption}`);
-        //actually call the yelp search function from utils/yelp.js
-        yelp(searchTerm, searchLocation, searchSortOption);
+        //Call the passed down doSearch() function from App.js, which will actually call the yelp search function from utils/yelp.js
+        props.doSearch(searchTerm, searchLocation, searchSortOption);
     }
 
 
