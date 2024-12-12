@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from './SearchBar.module.css';
-import yelp from '../utils/yelp.js';
+//import yelp shouldn't be needed in this file, trying with commenting it out.
+// import yelp from '../utils/yelp.js';
 //Object with keys being what the button does in human-friendly format, corresponding values being what should eventually be the corresponding call to Yelp API
 const sortOptions = {
     "Best Match": "best_match",

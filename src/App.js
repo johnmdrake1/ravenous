@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+//removing import logo, it's unneeded
+// import logo from './logo.svg';
 // import './App.css';
 import React, {useState} from 'react'
 import styles from './App.module.css';
